@@ -13,7 +13,7 @@ const Cart = (props) => {
             <h5 className="text-secondary">Total Selected Player: {cart.length} </h5>
             <h6 className="text-success">Selected Players Name: </h6>
             <ul>
-                {cart.map(player => <li>{player.first_name + " " + player.last_name}</li>)}
+                {cart.map(player => <li key={player.id}>{player.first_name + " " + player.last_name}</li>)}
             </ul>
 
             <p className="text-danger">Total Salary for the players: {totalSalary} Taka / Per Year </p>
